@@ -1,7 +1,7 @@
 import cv2
 from ultralytics import YOLO
 
-model = YOLO('./model_2/weights/best.pt')
+model = YOLO('./test_mode_3.pt')
 cap = cv2.VideoCapture('test_dataset/busy-roof-construction-SBV-300154131-preview.mp4')
 # cap = cv2.VideoCapture('test_dataset/2341409-hd_2048_960_30fps.mp4')
 # cap = cv2.VideoCapture('test_dataset/busy-roof-construction-SBV-300154131-preview.mp4')

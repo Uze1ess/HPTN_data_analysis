@@ -2,8 +2,8 @@ import os
 import re
 
 # Đường dẫn thư mục chứa ảnh và nhãn
-image_dir = './SH17_Original-1/train/images'
-label_dir = './SH17_Original-1/train/labels'
+image_dir = './SH17_Violence_Important_Label.v1-dataset-original-1.yolov8/valid/images'
+label_dir = './SH17_Violence_Important_Label.v1-dataset-original-1.yolov8/valid/labels'
 
 # Hàm xóa phần đuôi '_jpeg.rf.xxx...' khỏi tên file
 def rename_files_in_dir(directory):
@@ -12,7 +12,7 @@ def rename_files_in_dir(directory):
         name, ext = os.path.splitext(filename)
         
         # Kiểm tra có chuỗi '_jpeg.rf.' không
-        match = re.match(r'^(.+?)_jpeg\.rf\..+$', name)
+        match = re.match(r'^(.+?)_jpg\.rf\..+$', name)
         if match:
             new_name = match.group(1) + ext
             old_path = os.path.join(directory, filename)
